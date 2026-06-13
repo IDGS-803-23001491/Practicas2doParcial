@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Practica4.P4Activity">
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Calcular Valor de Resistencias"
+        android:textSize="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="233dp"
+        android:layout_height="217dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView23"
+        app:srcCompat="@drawable/resistencias" />
+
+    <Spinner
+        android:id="@+id/spn1"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <Spinner
+        android:id="@+id/spn2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/spn1"
+        app:layout_constraintStart_toStartOf="@+id/spn1"
+        app:layout_constraintTop_toBottomOf="@+id/spn1" />
+
+    <Spinner
+        android:id="@+id/spn3"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/spn2"
+        app:layout_constraintStart_toStartOf="@+id/spn2"
+        app:layout_constraintTop_toBottomOf="@+id/spn2" />
+
+    <TextView
+        android:id="@+id/txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/spn1"
+        app:layout_constraintStart_toEndOf="@+id/spn1"
+        app:layout_constraintTop_toTopOf="@+id/spn1" />
+
+    <TextView
+        android:id="@+id/txt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/spn2"
+        app:layout_constraintStart_toEndOf="@+id/spn2"
+        app:layout_constraintTop_toTopOf="@+id/spn2" />
+
+    <TextView
+        android:id="@+id/txt3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="2dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/spn3"
+        app:layout_constraintStart_toEndOf="@+id/spn3"
+        app:layout_constraintTop_toTopOf="@+id/spn3" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="16dp"
+        android:text="Tolerancia"
+        app:layout_constraintStart_toStartOf="@+id/spn3"
+        app:layout_constraintTop_toBottomOf="@+id/spn3" />
+
+    <RadioGroup
+        android:id="@+id/rdb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView25"
+        app:layout_constraintStart_toStartOf="@+id/textView25"
+        app:layout_constraintTop_toBottomOf="@+id/textView25">
+
+        <RadioButton
+            android:id="@+id/btnPlata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PLATA" />
+
+        <RadioButton
+            android:id="@+id/btnOro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ORO" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txtColor"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="28dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rdb"
+        app:layout_constraintStart_toEndOf="@+id/rdb"
+        app:layout_constraintTop_toBottomOf="@+id/textView25"
+        app:layout_constraintVertical_bias="0.484" />
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Calcular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rdb" />
+
+    <TextView
+        android:id="@+id/txtV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:text="OHM"
+        app:layout_constraintBottom_toBottomOf="@+id/txtM"
+        app:layout_constraintEnd_toStartOf="@+id/txtM"
+        app:layout_constraintTop_toTopOf="@+id/txtM" />
+
+    <TextView
+        android:id="@+id/txtM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="MÁXIMO"
+        app:layout_constraintEnd_toEndOf="@+id/btnCalcular"
+        app:layout_constraintStart_toStartOf="@+id/btnCalcular"
+        app:layout_constraintTop_toBottomOf="@+id/btnCalcular" />
+
+    <TextView
+        android:id="@+id/txtMaximo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="@+id/btnCalcular"
+        app:layout_constraintStart_toStartOf="@+id/btnCalcular"
+        app:layout_constraintTop_toBottomOf="@+id/txtM" />
+
+    <TextView
+        android:id="@+id/txtMi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:text="MÍNIMO"
+        app:layout_constraintBottom_toBottomOf="@+id/txtM"
+        app:layout_constraintStart_toEndOf="@+id/txtM"
+        app:layout_constraintTop_toTopOf="@+id/txtM" />
+
+    <TextView
+        android:id="@+id/txtMinimo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/txtMaximo"
+        app:layout_constraintEnd_toEndOf="@+id/txtMi"
+        app:layout_constraintStart_toStartOf="@+id/txtMi"
+        app:layout_constraintTop_toTopOf="@+id/txtMaximo" />
+
+    <TextView
+        android:id="@+id/txtVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/txtMaximo"
+        app:layout_constraintEnd_toEndOf="@+id/txtV"
+        app:layout_constraintStart_toStartOf="@+id/txtV"
+        app:layout_constraintTop_toTopOf="@+id/txtMaximo" />
+</androidx.constraintlayout.widget.ConstraintLayout>

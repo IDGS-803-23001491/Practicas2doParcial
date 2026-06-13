@@ -11,7 +11,6 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.idgs903.practicas2doparcial.Practica2.AreaActivity
 import com.idgs903.practicas2doparcial.R
 import java.time.LocalDate
 import java.time.Period
@@ -28,7 +27,7 @@ class P3Activity : AppCompatActivity() {
         val txtDia = findViewById<EditText>(R.id.txtDia)
         val txtMes = findViewById<EditText>(R.id.txtMes)
         val txtAnio = findViewById<EditText>(R.id.txtAnio)
-        val radio = findViewById<RadioGroup>(R.id.rdg)
+        val radio = findViewById<RadioGroup>(R.id.rdb)
         val btn = findViewById<Button>(R.id.btnImprimir)
 
         btn.setOnClickListener {
